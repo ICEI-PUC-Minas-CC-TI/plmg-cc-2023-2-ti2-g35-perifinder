@@ -1,19 +1,19 @@
-# [Nome do projeto]
+# PeriFinder
 
-[Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.]
+O projeto é basicamente um site que irá ajudar o usuario a encontrar o produto eletrônico que deseja.
+Comparando o preço do produto desejado em diversas lojas e fornecendo o resultado mais adequado, poupando tempo e esforço.
 
 ## Alunos integrantes da equipe
 
-* [Nome completo do aluno 1]
-* [Nome completo do aluno 2]
-* [Nome completo do aluno 3]
-* [Nome completo do aluno 4]
+* André Mendes Rodrigues
+* Arthur Martinho M. Oliveira
+* Daniel Salgado Magalhães
+* Gabriel Henrique Vieira de Oliveira
 
 ## Professores responsáveis
 
-* [Nome completo do professor 1]
-* [Nome completo do professor 2]
-
+* Daniel de Oliveira Capanema
+* Rommel Vieira Carneiro
 ## Instruções de utilização
 
 [Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.]
