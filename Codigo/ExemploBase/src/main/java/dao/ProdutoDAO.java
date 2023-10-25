@@ -29,7 +29,6 @@ public class ProdutoDAO extends DAO {
 	                   + "VALUES (?, ?, ?, ?, ?, ?)";
 	        PreparedStatement st = conexao.prepareStatement(sql);
 	        produto.setId(getMaxId() + 1);
-	        System.out.print(getMaxId());
 	        st.setInt(1, produto.getID());  // Use setInt para o campo ID
 	        st.setString(2, produto.getDescricao());
 	        st.setFloat(3, produto.getPreco());
