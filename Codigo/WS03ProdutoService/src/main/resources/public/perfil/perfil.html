@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="perfil.css">
+    <title>Mentor</title>
+
+    <script>
+        onload = () => {
+            let info = [];
+            info.push(nome);
+            info.push(celular);
+            info.push(cidade);
+            info.push(endereço);
+            info.push(e - mail);
+            info.push(idade);
+            localStorage.pessoa = JSON.stringify(info);
+
+            /* 
+            let i;
+            if ((i = localStorage.getItem('user')))
+              nome.value = JSON.parse(i).nome;
+ 
+             login.onsubmit = (evento) => {
+                 let user = {nome: nome.value};
+                 localStorage.setItem('user', JSON.stringify(user));
+                 evento.preventDefault();
+             };
+ 
+           */
+
+        };
+
+    </script>
+
+
+</head>
+
+<body>
+    <div class="container rounded bg-white mt-5 mb-5">
+        <div class="row">
+
+            <div class="col-md-3 border-right">
+
+
+
+
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                    <img class="rounded-circle mt-5"
+                        width="150px" src="foto.jpg" alt="Avatar">
+                   <!-- <span class="font-weight-bold">
+                         Usuário </span><span class="text-black-50">usuario@gmail.com</span> -->
+                </div>
+
+
+
+                
+            </div>
+
+
+            <div class="col-md-5 border-right">
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-right">Configurações do Perfil</h4>
+                    </div>
+                    <div class="row mt-2">
+
+                        <form id="login">
+                            <div class="row mt-3">
+                                <div class="col-md-12"><label for="nome" class="labels">Nome completo</label><input
+                                        type="text" id="nome" name="nome" class="form-control"
+                                        placeholder="Digite seu nome completo" value=""></div>
+                               
+
+                        </form>
+
+                    </div>
+
+                    <div class="col-md-12"><label for="celular" class="labels">Celular</label><input type="text"
+                            id="celular" name="celular" class="form-control" placeholder="Digite um número válido">
+                    </div>
+
+                    <div class="col-md-12"><label for="cidade" class="labels">Cidade/Estado</label><input type="text"
+                            id="cidade" name="cidade" class="form-control"
+                            placeholder="Digite sua cidade e a sigla do seu estado (Exemplo: São Paulo, SP)"></div>
+
+                    <div class="col-md-12"><label for="endereço" class="labels">Endereço</label><input type="text"
+                            id="endereço" name="endereço" class="form-control" placeholder="Digite um endereço válido"
+                            value=""></div>
+
+
+
+
+                    <div class="col-md-12"><label for="e-mail" class="labels">E-mail</label><input type="text"
+                            id="e-mail" name="e-mail" class="form-control"
+                            placeholder="Digite um endereço de e-mail válido" value=""></div>
+
+                          
+                          
+                          
+                   <div class="col-md-12"><label class="labels">Gênero</label><select name="gender"
+                                class="form-control">
+                                <option value="none" selected>Selecione o seu gênero</option>
+                                <option value="male">Masculino</option>
+                                <option value="female">Feminino</option>
+                                <option value="other">Outro</option>
+                    </select></div> 
+
+
+
+                   
+                </div>
+
+                <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button"
+                        type="submit">Salvar alterações</button></div>
+
+
+
+                <div class="mt-5 text-center"><button class="btn return-button"  type="button"  id="redirecionarBotao">Home</button></div>
+                
+
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="p-3 py-5">
+                <div class="d-flex justify-content-between align-items-center experience"><span>Informações
+                        adicionais</span></div><br>
+               
+                <div class="col-md-12"><label class="labels">Marca preferida</label><input type="text" class="form-control"
+                        placeholder="Conte-nos qual é a sua marca preferida" value=""></div>
+      
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <script>
+
+    var botao = document.getElementById("redirecionarBotao");  
+     botao.addEventListener("click", function() {
+     window.location.href = "/index.html";
+     });
+
+    </script>
+</body>
+
+</html>

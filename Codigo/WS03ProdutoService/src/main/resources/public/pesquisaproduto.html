@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Perifinder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="plugins/themefisher-font/style.css">
+  <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="plugins/lightbox2/dist/css/lightbox.min.css">
+  <link rel="stylesheet" href="plugins/animate/animate.css">
+  <link rel="stylesheet" href="plugins/slick/slick.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" type="images.png" href="images/blog/PerifinderLogoV4.png">
+
+</head>
+
+<body id="body">
+  <div id="preloader">
+    <div class='preloader'>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  
+  <section class="single-page-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h2>PESQUISAR PRODUTOS</h2>
+          <a href="index.html" class="inicio-link"> INÍCIO </a>
+					<a href="perfil/perfil.html" class="perfil-link"> PERFIL </a>
+					
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="blog-details section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+
+
+          <article class="post">
+            <div class="post-content">
+              <h3>Pesquise algum componente:</h3>
+
+              <p> Digite o nome ou modelo do componente eletrônico que você deseja pesquisar. Certifique-se de digitar com precisão para obter resultados relevantes.
+                Os resultados mostrarão o componente eletrônico que você pesquisou, clique nele para comparar os preços em diferentes sites para encontrar a melhor oferta disponível.
+
+              </p>
+                       <form id="search-form">
+                        <div class="search-container">
+                          <input type="text" id="search-input" class="search-bar" placeholder="Pesquisar...">
+                          <button type="button" id="search-button" >Buscar</button>
+                       </div>
+                      </form>
+                      <ul id="search-results"></ul>
+              
+                      <html>
+<head>
+<meta content="text/html; charset = UTF-8" http-equiv="content-type">
+
+<title>Controle de Estoque</title>
+</head>
+
+<script type="text/javascript">
+
+function confirmarDeleteProduto(id, descricao, preco) {  
+	
+    if (confirm('Confirmar a exclusão do produto [' + descricao + '] (ID ' + id + ') com preço R$ ' + preco)) {  
+        location.href = '/produto/delete/' + id;
+    }
+}
+function onLoad() {
+    if(document.getElementById("msg").value != ""){
+      alert(document.getElementById("msg").value);
+    }
+}
+</script>
+
+
+<body onload="onLoad()">
+	<h1>Controle de Estoque</h1>
+	<input type="hidden" id="msg" name="msg" value="">
+    <UM-PRODUTO>
+	<br>
+	<LISTAR-PRODUTO>
+	<style>
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: white;
+}
+
+
+.input--main__style {
+	background-color: #00FF00;
+}
+
+.input--button {
+	font-weight: bold;
+	font-family: Arial;
+	font-size: medium;
+	border-color: transparent;
+	display: block;
+	margin: 0px auto;
+	margin-bottom: 10px;
+	color: white;
+}
+
+.input--register {
+	display: inline;
+}
+
+input {
+	display: block;
+	border-radius: 7px;
+	padding: 10px;
+	border-style: solid;
+	border-color: lightgray;
+	color: black;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+form p {
+	text-align: initial;
+	display: inline;
+	margin-left: 15px;
+}
+
+.p--nomargin {
+	margin-left: 0px;
+	margin-right: 10px;
+}
+</style>
+</body>
+</html>
+           
+            </div>
+
+          </article>
+        </div>
+
+
+
+      </div>
+    </div>
+  </section>
+
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+  <script src="plugins/parallax/jquery.parallax-1.1.3.js"></script>
+  <script src="plugins/lightbox2/dist/js/lightbox.min.js"></script>
+  <script src="plugins/slick/slick.min.js"></script>
+  <script src="plugins/filterizr/jquery.filterizr.min.js"></script>
+  <script src="plugins/smooth-scroll/smooth-scroll.min.js"></script>
+  <script src="js/script.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Acesso aos elementos do DOM
+      const searchInput = document.getElementById('search-input');
+      const searchButton = document.getElementById('search-button');
+      const searchResults = document.getElementById('search-results');
+  
+      // Evento de clique no botão
+      searchButton.addEventListener('click', function () {
+        // Obter o texto da pesquisa
+        const searchText = searchInput.value;
+        
+  
+        // Limpar resultados anteriores
+        searchResults.innerHTML = '';
+  
+        if (searchText.trim() !== '') {
+          // Simular uma pesquisa (você pode substituir por sua lógica de pesquisa real)
+          const searchResult = performSearch(searchText);
+  
+          // Exibir o resultado na lista
+          const resultItem = document.createElement('li');
+          resultItem.textContent = searchResult;
+          searchResults.appendChild(resultItem);
+        } else {
+          // Se o campo de pesquisa estiver vazio, mostre uma mensagem
+          searchResults.innerHTML = '<li>Nenhuma pesquisa realizada.</li>';
+        }
+      });
+  
+      // Função de simulação de pesquisa (substitua por sua própria lógica)
+      function performSearch(query) {
+        // Aqui, você pode realizar a pesquisa real com base na consulta 'query'
+        // e retornar o resultado da pesquisa.
+        // Neste exemplo, apenas retornamos a consulta para simplificar.
+        return 'Resultado da pesquisa para: ' + query;
+      }
+    });
+  </script>
+  
+  
+</body>
+
+</html>
