@@ -46,8 +46,8 @@ CREATE TABLE usuario (
 -- Name: preços; Type: TABLE; Schema: public; Owner: ti2
 --
 
-CREATE TABLE preços (
-    idPreços int primary key,
+CREATE TABLE precos (
+    idPrecos int primary key,
     valor float
 );
 
