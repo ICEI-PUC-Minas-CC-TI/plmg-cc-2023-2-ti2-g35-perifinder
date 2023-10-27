@@ -1,7 +1,8 @@
 # PeriFinder
 
-O projeto é basicamente um site que irá ajudar o usuario a encontrar o produto eletrônico que deseja.
-Comparando o preço do produto desejado em diversas lojas e fornecendo o resultado mais adequado, poupando tempo e esforço.
+O objetivo do "PeriFinder" é simplificar a busca por periféricos eletrônicos de qualidade, comparar preços, promover a compatibilidade entre 
+produtos e proporcionar economia de tempo e dinheiro aos usuários, tornando a tecnologia mais acessível e informada. Ele oferece uma plataforma centralizada onde os usuários podem realizar pesquisas, filtrar
+resultados, comparar produtos e receber recomendações com base em suas preferências. Além disso, o sistema verifica a compatibilidade entre produtos selecionados, evitando escolhas inadequadas.
 
 ## Alunos integrantes da equipe
 
