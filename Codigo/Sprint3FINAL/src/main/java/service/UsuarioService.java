@@ -51,7 +51,7 @@ public class UsuarioService {
 			String name, nome, buttonLabel;
 			if (orderBy == FORM_INSERT){
 			action += "insert";
-			name = "Cadastro";
+			name = "Cadastro de Usuários";
 			nome = "";
 			buttonLabel = "Criar";
 			
