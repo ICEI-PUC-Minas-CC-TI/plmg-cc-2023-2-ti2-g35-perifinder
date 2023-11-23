@@ -1,0 +1,156 @@
+<html>
+<head>
+<meta content="text/html; charset = UTF-8" http-equiv="content-type">
+
+<title>Controle de Usuarios</title>
+</head>
+
+<script type="text/javascript">
+
+function confirmarDeleteUsuario(id, nome, email) {  
+	
+    if (confirm('Confirmar a exclusão do usuario [' + nome + '] (ID ' + id + ') com email ' + email)) {  
+        location.href = '/usuario/delete/' + id;
+    }
+}
+function onLoad() {
+    if(document.getElementById("msg").value != ""){
+      alert(document.getElementById("msg").value);
+    }
+}
+</script>
+
+
+<body onload="onLoad()">
+
+	<input type="hidden" id="msg" name="msg" value="">
+    <UM-PRODUTO>
+	<br>
+	
+<style>
+/* Estilo para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para o formulário de registro */
+.form--register {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Estilo para o cabeçalho do formulário */
+.form--register h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+/* Estilo para os campos de entrada de texto */
+.input--register {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block; /* Cada campo em uma linha */
+}
+
+/* Estilo para o botão de envio */
+.input--button {
+    background-color: #b4189a; /* Cor personalizada */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transição de cor suave */
+}
+
+/* Altera a cor de fundo quando o mouse passa por cima do botão */
+.input--button:hover {
+    background-color: #e64eb1; /* Cor mais clara */
+}
+
+/* Estilo para o link "Fazer Login" */
+.form--register a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+/* Estilo para a tabela dentro do formulário */
+.form--register table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Estilo para as células da tabela */
+.form--register td {
+    padding: 10px;
+}
+
+/* Estilo para a célula que contém o link "Fazer Login" */
+.form--register td a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+/* Botao Home */
+.custom-button {
+    background-color: #851d86; /* Altere a cor de fundo para vermelho */
+    color: #fff; /* Altere a cor do texto para branco */
+    border-radius: 10px; /* Aumente o raio da borda para arredondar mais o botão */
+    padding: 15px 20px; /* Aumente o preenchimento para um botão maior */
+    transition: background-color 0.3s, color 0.3s; /* Adicione transições para suavizar as mudanças de cor */
+}
+
+.custom-button:hover {
+    background-color: #ff00ff; /* Altere a cor de fundo quando o botão é destacado */
+    color: #fff; /* Mantenha a cor do texto como branco quando o botão é destacado */
+}
+
+.input--main__style {
+    background-color: #851d86;
+    transition: background-color 0.3s 0.1s; 
+}
+
+.input--main__style:hover {
+    background-color: #ff00ff; 
+    transition: background-color 0.2s; 
+}
+
+
+.input--button {
+	font-weight: bold;
+	font-family: Arial;
+	font-size: medium;
+	border-color: transparent;
+	display: block;
+	margin: 0px auto;
+	margin-bottom: 10px;
+	color: white;
+}
+
+</style>
+
+<button class="input--main__style input--button custom-button" type="button" id="redirecionarBotao">Home</button>
+
+<script>
+
+    var botao = document.getElementById("redirecionarBotao");  
+     botao.addEventListener("click", function() {
+     window.location.href = "http://127.0.0.1:5500/src/main/resources/public/index.html";
+     });
+
+</script>
+
+</body>
+</html>

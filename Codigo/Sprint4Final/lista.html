@@ -1,0 +1,240 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+		<title>Perifinder - PesquisarProdutos</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="../public/plugins/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../public/plugins/lightbox2/dist/css/lightbox.min.css">
+		<link rel="stylesheet" href="../public/plugins/animate/animate.css">
+		<link rel="stylesheet" href="../public/plugins/slick/slick.css">
+		<link rel="stylesheet" href="../public/css/maps/style.css">
+		<link rel="shortcut icon" type="image.png" href="../public/resources/images/blog/PerifinderLogoV4">
+	</head>
+	
+
+<script type="text/javascript">
+
+function confirmarDeleteProduto(id, descricao, preco) {  
+	
+    if (confirm('Confirmar a exclusão do produto [' + descricao + '] (ID ' + id + ') com preço R$ ' + preco)) {  
+        location.href = '/produto/delete/' + id;
+    }
+}
+function onLoad() {
+    if(document.getElementById("msg").value != ""){
+      alert(document.getElementById("msg").value);
+    }
+}
+</script>
+
+
+<body onload="onLoad()">
+	<h1 style="color: white;">PESQUISAR PRODUTOS</h1>
+	<input type="hidden" id="msg" name="msg" value="">
+
+    <form class="search-container" action = "listar" method = "get">
+        <input type="text" id="search-input" class="search-bar" placeholder="Pesquisar">
+        <button type="button" id="search-button" class="search-button">Buscar</button>
+        <ul id="search-results"></ul>
+    </form>
+      
+    <UM-PRODUTO>
+	<br>
+	<LISTAR-PRODUTO>
+
+	<style>
+@import url("https://fonts.googleapis.com/css?family=Catamaran:400,500,600,700,700|Source+Sans+Pro:400,600");
+* {
+	box-sizing: border-box;
+}
+
+body {
+	line-height: 1.4;
+    font-family: "Source Sans Pro", sans-serif;
+    -webkit-font-smoothing: antialiased;
+	background-color: #421063;
+}
+
+
+.input--main__style {
+    background-color: #851d86;
+    transition: background-color 0.3s 0.1s; 
+}
+
+.input--main__style:hover {
+    background-color: #ff00ff; 
+    transition: background-color 0.2s; 
+}
+
+
+.input--button {
+	font-weight: bold;
+	font-family: Arial;
+	font-size: medium;
+	border-color: transparent;
+	display: block;
+	margin: 0px auto;
+	margin-bottom: 10px;
+	color: white;
+}
+
+.input--register {
+	display: inline;
+}
+
+input {
+	display: block;
+	border-radius: 7px;
+	padding: 10px;
+	border-style: solid;
+	border-color: rgb(73, 6, 94);
+	color: rgb(122, 44, 141);
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+form p {
+	
+	text-align: initial;
+	display: inline;
+	margin-left: 15px;
+}
+
+.p--nomargin {
+	margin-left: 0px;
+	margin-right: 10px;
+}
+
+/* ----------------------------------- */
+
+/* Estilo para a tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+/* Estilo para as células de cabeçalho */
+th {
+  background-color: #f2f2f2;
+  text-align: left;
+  padding: 10px;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Estilo para as células da tabela */
+td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Estilo para as células com links */
+td a {
+  text-decoration: none;
+  color: #9900ff;
+}
+
+/* Estilo para os botões */
+.button {
+  background-color: #d09eff;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* Estilo para a mensagem de nota */
+.message {
+  margin-top: 20px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Estilo para o ícone no botão */
+.icon svg {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+/* Estilo para a coluna de anúncios */
+.column.is-hidden-mobile {
+  display: none;
+}
+
+/* Botao Home */
+.custom-button {
+    background-color: #851d86; /* Altere a cor de fundo para vermelho */
+    color: #fff; /* Altere a cor do texto para branco */
+    border-radius: 10px; /* Aumente o raio da borda para arredondar mais o botão */
+    padding: 15px 20px; /* Aumente o preenchimento para um botão maior */
+    transition: background-color 0.3s, color 0.3s; /* Adicione transições para suavizar as mudanças de cor */
+}
+
+.custom-button:hover {
+    background-color: #ff00ff; /* Altere a cor de fundo quando o botão é destacado */
+    color: #fff; /* Mantenha a cor do texto como branco quando o botão é destacado */
+}
+
+/* Estilos para o container da barra de pesquisa */
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+}
+
+/* Estilos para a barra de pesquisa */
+.search-bar {
+    width: 9000px;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+/* Estilos para o botão de pesquisa */
+.search-button {
+    background-color: #855aad;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin-left: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Estilos para o botão de pesquisa ao passar o mouse*/
+.search-button:hover {
+    background-color: #a28db5;
+}
+</style>
+
+
+<button class="input--main__style input--button custom-button" type="button" id="redirecionarBotao">Home</button>
+
+<script>
+    var botao = document.getElementById("redirecionarBotao");  
+     botao.addEventListener("click", function() {
+     window.location.href = "http://127.0.0.1:5500/src/main/resources/public/index.html";
+     });
+</script>
+
+    <script src="plugins/jquery/jquery.min.js"></script>
+	<script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+	<script src="plugins/parallax/jquery.parallax-1.1.3.js"></script>
+	<script src="plugins/lightbox2/dist/js/lightbox.min.js"></script>
+	<script src="plugins/slick/slick.min.js"></script>
+	<script src="plugins/filterizr/jquery.filterizr.min.js"></script>
+	<script src="plugins/smooth-scroll/smooth-scroll.min.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
