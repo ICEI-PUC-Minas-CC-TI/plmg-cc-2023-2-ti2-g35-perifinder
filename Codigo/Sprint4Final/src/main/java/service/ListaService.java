@@ -46,74 +46,6 @@ public class ListaService {
 		    entrada.close();
 		}  catch (Exception e) { System.out.println(e.getMessage()); }
 		
-		/*String umProduto = "";
-		if(tipo != FORM_INSERT) {
-			umProduto += "\t<table width=\"80%\" bgcolor=\"#f3f3f3\" align=\"center\">";
-			umProduto += "\t\t<tr>";
-			umProduto += "\t\t\t<td align=\"left\"><font size=\"+2\"><b>&nbsp;&nbsp;&nbsp;<a href=\"/produto/list/1\">Novo Produto</a></b></font></td>";
-			umProduto += "\t\t</tr>";
-			umProduto += "\t</table>";
-			umProduto += "\t<br>";			
-		}
-		
-		if(tipo == FORM_INSERT || tipo == FORM_UPDATE) {
-			String action = "/produto/";
-			String name, nome, descricao, buttonLabel;
-			if (tipo == FORM_INSERT){
-				action += "insert";
-				name = "Inserir Produto";
-				nome = "";
-				descricao = "";
-				buttonLabel = "Inserir";
-			} else {
-				action += "update/" + produto.getID();
-				name = "Atualizar Produto (ID " + produto.getID() + ")";
-				nome = produto.getNome();
-				descricao = produto.getDescricao();
-				buttonLabel = "Atualizar";
-			}
-			umProduto += "\t<form class=\"form--register\" action=\"" + action + "\" method=\"post\" id=\"form-add\">";
-			umProduto += "\t<table width=\"80%\" bgcolor=\"#f3f3f3\" align=\"center\">";
-			umProduto += "\t\t<tr>";
-			umProduto += "\t\t\t<td colspan=\"3\" align=\"left\"><font size=\"+2\"><b>&nbsp;&nbsp;&nbsp;" + name + "</b></font></td>";
-			umProduto += "\t\t</tr>";
-			umProduto += "\t\t<tr>";
-			umProduto += "\t\t\t<td colspan=\"3\" align=\"left\">&nbsp;</td>";
-			umProduto += "\t\t</tr>";
-			umProduto += "\t\t<tr>";
-			umProduto += "\t\t\t<td>Nome: <input class=\"input--register\" type=\"text\" name=\"nome\" value=\""+ nome +"\"></td>";
-			umProduto += "\t\t\t<td>&nbsp;Descrição: <input class=\"input--register\" type=\"text\" name=\"descricao\" value=\""+ descricao +"\"></td>";
-			umProduto += "\t\t\t<td>&nbsp;Categoria: <input class=\"input--register\" type=\"text\" name=\"categoria\" value=\""+ produto.getCategoria().toString() + "\"></td>";
-			umProduto += "\t\t\t\t<td align=\"center\"><input type=\"submit\" value=\""+ buttonLabel +"\" class=\"input--main__style input--button\"></td>";
-			umProduto += "\t\t</tr>";
-			umProduto += "\t\t</tr>";
-
-			
-
-			umProduto += "\t</table>";
-			umProduto += "\t</form>";		
-		} else if (tipo == FORM_DETAIL){
-			umProduto += "\t<table width=\"80%\" bgcolor=\"#f3f3f3\" align=\"center\">";
-			umProduto += "\t\t<tr>";
-			umProduto += "\t\t\t<td colspan=\"3\" align=\"left\"><font size=\"+2\"><b>&nbsp;&nbsp;&nbsp;Detalhar Produto (ID " + produto.getID() + ")</b></font></td>";
-			umProduto += "\t\t</tr>";
-			umProduto += "\t\t<tr>";
-			umProduto += "\t\t\t<td colspan=\"3\" align=\"left\">&nbsp;</td>";
-			umProduto += "\t\t</tr>";
-			umProduto += "\t\t<tr>";
-			umProduto += "\t\t\t<td>&nbsp;Nome: "+ produto.getNome() +"</td>";
-			umProduto += "\t\t\t<td>&nbsp;Descrição: "+ produto.getDescricao() +"</td>";
-			umProduto += "\t\t\t<td>Categoria: "+ produto.getCategoria() +"</td>";
-			umProduto += "\t\t</tr>";
-			umProduto += "\t\t<tr>";
-			umProduto += "\t\t\t<td>&nbsp;</td>";
-			umProduto += "\t\t</tr>";
-			umProduto += "\t</table>";		
-		} else {
-			System.out.println("ERRO! Tipo não identificado " + tipo);
-		}
-		form = form.replaceFirst("<UM-PRODUTO>", umProduto);*/
-		
 		String lista = new String("<table width=\"80%\" align=\"center\" bgcolor=\"#f3f3f3\">");
 		lista += "\n<tr>\n" +
         		"\t<td><a href=\"/produto/lista/" + FORM_ORDERBY_NOME + "\"><b>Nome</b></a></td>\n" +
@@ -134,7 +66,7 @@ public class ListaService {
 			lista += "\n<tr bgcolor=\""+ bgcolor +"\">\n" + 
             		  "\t<td>" + p.getNome() + "</td>\n" +
             		  "\t<td>" + p.getCategoria() + "</td>\n" +
-            		  "\t<td align=\"center\" valign=\"middle\"><a href=\"/produto/" + p.getID() + "\"><img src=\"/image/detail.png\" width=\"20\" height=\"20\"/></a></td>\n";
+            		  "\t<td align=\"center\" valign=\"middle\"><a href=\"/PaginaProduto.html\"><img src=\"/image/detail.png\" width=\"20\" height=\"20\"/></a></td>\n";
 		}
 		lista += "</table>";		
 		form = form.replaceFirst("<LISTAR-PRODUTO>", lista);				
