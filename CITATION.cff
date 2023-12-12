@@ -1,31 +1,32 @@
 cff-version: 1.0.1
 message: Please cite this software using these metadata.
-title: 
+title: Perifinder
 authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
+  - family-names: Mendes Rodrigues
+    given-names: Andre
+  - family-names: Martinho Medeiros Oliveira
+    given-names: Arthur
+  - family-names: Salgado Magalhães
+    given-names: Daniel
+  - family-names: Henrique Vieira de Oliveira
+    given-names: Gabriel
   - family-names: 
     given-names: 
   - family-names: 
     given-names:
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: de Oliveira Capanema
+    given-names: Daniel
   - name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+    family-names: Vieira Carneiro
+    given-names: Rommel
 keywords:
-  - 
-  - 
-repository-code: 
+  - Periféricos eletrônicos
+  - Sistema Inteligente
+  - Utilidade
+repository-code: https://github.com/ICEI-PUC-Minas-CC-TI/plmg-cc-2023-2-ti2-g35-perifinder/tree/master
 license: CC-BY-4.0
 version: 1.0.0
-date-released: 2022-07-14
+date-released: 2023 - 12 - 12
